@@ -1,0 +1,28 @@
+1. Overview
+We built this deep learning model to attempt to create a tool that will help the nonprofit foundation Alphabet Soup select applicants for funding that have the best chance of success in their ventures.
+2.Results:
+Data Preprocessing:
+* What variable(s) are the target(s) for your model?
+o The variable that is the target of the model is "IS_SUCCESSFUL" or was the money used successfully?
+* What variable(s) are the features for your model?
+o The variables that are the features of the model are:
+* APPLICATION_TYPE- Alphabet Soup application type
+* AFFILIATION- Affiliated sector of industry
+* CLASSIFICATION- Government organization classification
+* USE_CASE- Use case for funding
+* STATUS-Active status
+* INCOME_AMT- Income classification
+* SPECIAL_CONSIDERATIONS-Special considerations for application
+* ASK_AMT-funding amount requested
+* What variable(s) should be removed from the input data because they are neither targets nor features?
+o The variables EIN and NAME were removed because they are columns with unique identification information that is not relevant in training the model.
+
+Compiling, Training, and Evaluating the Model
+* How many neurons, layers, and activation functions did you select for your neural network model, and why?
+o Initially we chose to use 3 layers, with 80 neurons in the first, and 30 in the second with “relu” activation. We used these initially because they were the first hyperparameters given to us by gpt
+* Were you able to achieve the target model performance?
+o We were not able to achieve the target model performance of 75% before or after the optimization.
+* What steps did you take in your attempts to increase model performance?
+o We attempted to increase model performance by first adding additional layers to the model, then changing the activation of the hidden layers from “relu” to “tanh”.  
+3.Summary
+We were unable to get better than 55.67% loss and 73.11% accuracy with the 4 different models that were built. Because it is a binary classification problem, in the future we could potentially attempt to train a supervised logistic regression model instead of a deep learning model. There is also further optimization that can be done within the deep learning model, potentially adding more layers, and optimizing the number of neurons in each layer could further increase the accuracy of the model. Further examining the data to determine which variables may be worth removing from the training dataset could also greatly increase accuracy.  
